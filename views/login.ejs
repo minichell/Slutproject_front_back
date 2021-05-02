@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="/css/index.css" type="text/css">
+    <link rel="stylesheet" href="/css/login.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -36,24 +36,29 @@
       });
     </script>
 
-    <header>
-        <div class="container" data-aos= "fade-up">
-            <p class="title">CALMPLAN</p>
-            <nav>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PLAN</a></li>
-                    <li><a href="#">EXERSICE</a></li>
-                    <li><a href="#">SCHOOL</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                </ul>
-      <label id="icon">
-          <i class="fas fa-bars"></i>
-      </label>
-           </nav>
-      </div>
-    </header>
+<p class="title">CALMPLAN</p>
 
+<h1>Login</h1>
+<% if (messages.error) { %>
+    <%= messages.error  %>
+    <% } %>
+<form action="/login" method="POST">
 
+<div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email"
+    required>
+</div>
+<div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password"
+    required>
+</div>
+
+    <button type="submit">Login</button>
+
+</form>
+<a href="/register">Register</a>
 </body>
 </html>
+
