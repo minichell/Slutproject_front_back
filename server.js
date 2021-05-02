@@ -9,12 +9,6 @@ const passport = require('passport')
 const flash = require('express-flash')
 const session = require ('express-session')
 const methodOverride = require('method-override')
-const clientDir = __dirname + "\\views\\"
-
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use (express.static(clientDir))
-app.set('view engine', 'ejs')
 
 const initializePassport = require('./passport.config')
 
@@ -25,6 +19,8 @@ initializePassport(
 )
 
 const users = []
+
+app.use(express.static(__dirname + '/public'));
 
 app.set('view-engine','ejs')
 app.use(express.urlencoded({ extended: false}))
