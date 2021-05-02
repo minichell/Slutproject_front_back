@@ -1,0 +1,92 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400;
+    width: 100%;
+    height:100vh;
+    color: black;
+    background: linear-gradient(-45deg, rgba(79, 154, 149), rgba(127, 194, 189), rgba(221, 245, 244), rgba(252, 255, 255));
+  }
+  
+  .title{
+    position: absolute;
+    font-size: 140px;
+    right: 33%;
+    top: 15%;
+    font-family: 'Kalam', cursive;
+  }
+  
+  .register{
+    position: absolute;
+    font-size: 60px;
+    right: 44%;
+    top: 35%;
+    font-family: 'Kalam', cursive;
+  }
+  
+  .form{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+    background-color: #7FC2BD;
+    padding: 80px  120px;
+    box-shadow: 5px 5px 20px black;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing:
+    border-box;
+    
+  }
+  
+  button {
+    background-color: #DDF5F4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: black;
+    padding: 14px 40px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover{
+    color: #4F9A95;
+  }
+  
+  .login a{
+    font-family: 'Kalam', cursive;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 90%;
+    left: 46.55%;
+    font-size: 27px;
+  }
+  
+  .login a:hover{
+    color: white;
+  }

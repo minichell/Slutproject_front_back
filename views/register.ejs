@@ -1,5 +1,45 @@
-<h1>Register</h1>
-<form action="/register" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/register.css" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css%22%3E" >
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js%22%3E"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script>
+        $(document).ready(function(){
+         $('#icon').click(function(){
+             $('ul').toggleClass('show');
+         });
+        });
+    </script>
+    <title>CalmPlam</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" ></script> <!----->
+    <script>
+      AOS.init({
+          offset: 200,
+          duration: 1000
+      });
+    </script>
+
+<p class="title" data-aos="fade-up">CALMPLAN</p>
+
+
+<h1 class="register" data-aos="fade-up">REGISTER</h1>
+<form class="form" action="/register" method="POST">
 
  <div>
     <label for="name">Name</label>
@@ -17,7 +57,13 @@
     required>
 </div>
 
-    <button type="submit">Register</button>
+    <button type="submit">REGISTER</button>
 
 </form>
-<a href="/login">Login</a>
+
+<div class="login">
+<a href="/login">Log In</a>
+</div>
+
+</body>
+</html>
