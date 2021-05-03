@@ -3,7 +3,12 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
 const express = require('express')
+
+const mongooseData = require('./mongooseData')
+const DBmodule = require('./DBmodule')
+const mongoose = require('mongoose');
 const app = express()
+
 const bcrypt = require('bcrypt')
 const passport = require('passport')
 const flash = require('express-flash')
@@ -65,6 +70,7 @@ app.post('/register', checkNotAuthenticated , async (req, res) => {
     } catch{
         res.redirect('/register')
     }
+    console.log(users)
 })
 
 app.delete('/logout', (req, res) => {
@@ -86,5 +92,17 @@ function checkNotAuthenticated(req, res, next) {
     }
     next()
 }
+
+app.post('/register', (req, res) => {
+
+
+    var Person = mongooseData.createPerson(req.body.name, req.body.Email);
+ 
+  
+    DBmodule.saveInput(Person);
+
+    res.redirect('/thanks');
+
+ });
 
 app.listen(3000)

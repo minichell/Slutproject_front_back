@@ -90,3 +90,13 @@ button:hover{
 .register a:hover{
   color: white;
 }
+
+.error{
+  color: rgb(250, 127, 127);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  position: absolute;
+  top: 46%;
+  left: 44.56%;
+  z-index: 3;
+}

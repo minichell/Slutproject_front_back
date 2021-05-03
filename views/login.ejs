@@ -38,9 +38,12 @@
 <p class="title" data-aos="fade-up">CALMPLAN</p>
 
     <h1 class="login" data-aos="fade-up">LOG IN</h1>
+
+    <div class="error">
 <% if (messages.error) { %>
     <%= messages.error  %>
     <% } %>
+</div>
 <form class="form" action="/login" method="POST">
 
 <div>
