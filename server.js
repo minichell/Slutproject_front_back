@@ -53,11 +53,11 @@ app.post('/login',checkNotAuthenticated, passport.authenticate('local', {
     failureFlash: true
 })) 
 
-app.get('/register', checkNotAuthenticated, (req,res) => {
+app.get('/register', (req,res) => {
     res.render('register.ejs')
 })
 
-app.post('/register', checkNotAuthenticated , async (req, res) => {
+app.post('/register', async (req, res) => {
     try{
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         users.push({
@@ -66,10 +66,19 @@ app.post('/register', checkNotAuthenticated , async (req, res) => {
             email: req.body.email,
             password: hashedPassword
         })
-        res.redirect('/login')
+       
     } catch{
         res.redirect('/register')
     }
+
+    var Person = mongooseData.createPerson(req.body.name, req.body.email, req.body.password);
+ 
+  
+    DBmodule.saveInput(Person);
+
+    res.redirect('/login');
+
+    
     console.log(users)
 })
 
@@ -93,16 +102,5 @@ function checkNotAuthenticated(req, res, next) {
     next()
 }
 
-app.post('/register', (req, res) => {
-
-
-    var Person = mongooseData.createPerson(req.body.name, req.body.Email);
- 
-  
-    DBmodule.saveInput(Person);
-
-    res.redirect('/thanks');
-
- });
 
 app.listen(3000)
