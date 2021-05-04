@@ -39,8 +39,9 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride('_method'))
 
-app.get('/', checkAuthenticated, (req,res) => {
+app.get('/',  checkAuthenticated, (req,res) => {
     res.render('index.ejs', {name: req.user.name})
+    
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -53,11 +54,11 @@ app.post('/login',checkNotAuthenticated, passport.authenticate('local', {
     failureFlash: true
 })) 
 
-app.get('/register', (req,res) => {
+app.get('/register',checkNotAuthenticated, (req,res) => {
     res.render('register.ejs')
 })
 
-app.post('/register', async (req, res) => {
+app.post('/register',checkNotAuthenticated, async (req, res) => {
     try{
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         users.push({
@@ -72,8 +73,7 @@ app.post('/register', async (req, res) => {
     }
 
     var Person = mongooseData.createPerson(req.body.name, req.body.email, req.body.password);
- 
-  
+
     DBmodule.saveInput(Person);
 
     res.redirect('/login');
