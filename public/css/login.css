@@ -17,6 +17,8 @@ body{
   height:100vh;
   color: black;
   background: linear-gradient(-45deg, rgba(79, 154, 149), rgba(127, 194, 189), rgba(221, 245, 244), rgba(252, 255, 255));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .title{
@@ -56,9 +58,12 @@ input {
   display: inline-block;
   border: 1px solid white;
   border-radius: 4px;
-  box-sizing:
-  border-box;
+  box-sizing: border-box;
   
+}
+
+input:focus {
+  outline: none;
 }
 
 button {
