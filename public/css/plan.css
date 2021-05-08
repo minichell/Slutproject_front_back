@@ -484,26 +484,6 @@ button {
     }
 }
 
-.form{
-    position: absolute;
-    top: 105%;
-    left: 15%;
-    font-family: 'Kalam', cursive;
-    font-weight: 600;
-    font-size: 30px;
-    
-}
-
-input{
- border: none;
- height: 50px;
- border-radius: 20px;
- box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.no-outline:focus {
-    outline: none;
-  }
 
   .quotes{
       position: absolute;
@@ -512,15 +492,3 @@ input{
       text-align: center;
   }
 
-  .no-outline{
-      font-family: 'Kalam', cursive;
-      text-align: center;
-  }
-
-  .button2{
-    position: absolute;
-    top: 105%;
-    left: 30%;
-    border-radius: 20px;
-    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
