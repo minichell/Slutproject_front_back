@@ -484,7 +484,6 @@ button {
     }
 }
 
-
   .quotes{
       position: absolute;
       top: 500%;
@@ -492,3 +491,50 @@ button {
       text-align: center;
   }
 
+  .storage:focus{
+    outline: none;
+  }
+
+  .storage{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .text{
+    font-family: 'Kalam', cursive;
+    font-weight: 600;
+  }
+
+  .con{
+      position: absolute;
+      left: 45%;
+      top: 30%;
+  }
+
+  .date{
+    position: absolute;
+    right: 120%;
+    top: 10%;
+    font-family: 'Kalam', cursive;
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  .button2{
+      left: 100%;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+.con2{
+    position: absolute;
+      left: 40%;
+      top: 100%;
+}
