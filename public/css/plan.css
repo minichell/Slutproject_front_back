@@ -533,16 +533,109 @@ button {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
+
+.todo{
+    position: absolute;
+    left: 44%;
+    top: 45%;
+    padding: 12px 40px;
+    margin-bottom: 16px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.todo:focus{
+    outline: none;
+}
+
+.button3{
+    top: 44.5%;
+    left: 58%;
+}
+
+.button3:focus{
+    outline: none;
+}
+
+.button4{
+    top: 44.5%;
+    left: 64%;
+}
+
+.button5{
+    display: block;
+    position: relative;
+    top: 60%;
+    left: 20%;
+}
+
+.plan{
+    position: absolute;
+    left: 39%;
+    top: 45%;
+    font-family: 'Kalam', cursive;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.newtodo{
+    position: absolute;
+    left: 39%;
+    top: 50%;
+    font-family: 'Kalam', cursive;
+    font-weight: 600;
+}
+
+.check{
+    position: absolute;
+    list-style: none;
+    left: 45%;
+    top: 52%;
+    font-family: 'Kalam', cursive;
+
+}
+
 .done{
     text-decoration: line-through;
 }
 
-.button4{
-    position: absolute;
-    top: 100%;
+input[type="checkbox"] {
+appearance: none;
+-webkit-appearance:none;
+height: 40px; 
+width: 40px;
+background-color: white;
+border-radius: 50%;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-.button5{
-    position: absolute;
-    top: 150%;
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    display: none;
 }
+
+input[type="checkbox"]:hover{
+     background-color: white;
+}
+
+input[type="checkbox"]:checked{
+    background-color:#70A6A2;
+}
+
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+
+

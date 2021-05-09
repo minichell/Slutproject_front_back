@@ -7,6 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,19 +110,19 @@
 </div>
 
 
-<main id="app">
-    <h3>{{title}}</h3>
+<main id="app" class="app">
+    <h3 class="plan">{{title}}</h3>
     <form @submit.prevent= "addTodo">
-        <label for="newTodo">New Todo</label>
-        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
-        <button type="submit" name="button">Add</button>
+        <label for="newTodo" class="newtodo">New List</label>
+        <input v-model="newTodo"  name="newTodo" id="newTodo" value="" class="todo" placeholder="What's your plan today">
+        <button type="submit" name="button" class="button3">Add</button>
     </form>
-    <button @click="allDone" type="button" name="button" class="button5">Mark All Done</button>
-    <ul>
+    <button @click="allDone" type="button" name="button" class="button4">Mark All Done</button>
+    <ul class="check">
         <li v-for="todo in todos">
             <input type="checkbox" v-model="todo.done">
           <span :class="{ done: todo.done }">{{todo.title}}</span> 
-          <button @click="removeTodo(todo)" type="button" name="button" class="button4">Remove</button>
+          <button @click="removeTodo(todo)" type="button" name="button" class="button5">Remove</button>
          </li>
     </ul>
 </main>
