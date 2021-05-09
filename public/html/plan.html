@@ -110,29 +110,31 @@
 
 
 <main id="app">
-    <h3>{{title}}</h3> 
+    <h3>{{title}}</h3>
     <form @submit.prevent= "addTodo">
         <label for="newTodo">New Todo</label>
         <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
         <button type="submit" name="button">Add</button>
     </form>
-
-    <button @click="allDone">All Done</button>
+    <button @click="allDone" type="button" name="button" class="button5">Mark All Done</button>
     <ul>
         <li v-for="todo in todos">
             <input type="checkbox" v-model="todo.done">
-            <span :class="{ done: todo.done} ">{{todo.title}}</span>
-            <button @click="removeTodo(todo)" type="button" name="button">Remove</button>
-        </li>
+          <span :class="{ done: todo.done }">{{todo.title}}</span> 
+          <button @click="removeTodo(todo)" type="button" name="button" class="button4">Remove</button>
+         </li>
     </ul>
 </main>
+   
+
+
+
+<div class="quotes">u got this</div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
-    <div class="quotes">u got this</div>
-
-<script src="/text/list.js" charset="utf-8"></script>
+<script src="/text/list.js"></script>
 <script src="/text/app.js"></script>
 <script src="/text/text.js"></script>
+
 
 </body>
 

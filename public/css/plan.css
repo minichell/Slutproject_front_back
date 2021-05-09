@@ -533,8 +533,16 @@ button {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
-.con2{
+.done{
+    text-decoration: line-through;
+}
+
+.button4{
     position: absolute;
-      left: 40%;
-      top: 100%;
+    top: 100%;
+}
+
+.button5{
+    position: absolute;
+    top: 150%;
 }
