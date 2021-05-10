@@ -484,13 +484,6 @@ button {
     }
 }
 
-  .quotes{
-      position: absolute;
-      top: 500%;
-      left: 60%;
-      text-align: center;
-  }
-
   .storage:focus{
     outline: none;
   }
@@ -638,7 +631,7 @@ input[type="checkbox"]:checked:after{
     position: absolute;
     height: 200px;
     width: 400px;
-    left: 75%;
+    left: 76%;
     top: 60%;
     transform: translate(-50%, -20%);
     padding: 6px 14px;
@@ -647,10 +640,6 @@ input[type="checkbox"]:checked:after{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.fas fa-plus{
-    position: relative;
-    left: 10%;
-}
 
 h3{
     font-size: 28px;

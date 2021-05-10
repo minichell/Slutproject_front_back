@@ -1,44 +1,35 @@
 new Vue ({
 
     el: "#goal",
-    data () {
-        return{
-            taskList: [],
-            task: "",
-            color: ""
+    data: {
+        todos:[],
+        newTodo:null,
+      },
+      mounted() {
+        if(localStorage.getItem('todos')) {
+          try {
+            this.todos = JSON.parse(localStorage.getItem('todos'));
+          } catch(e) {
+            localStorage.removeItem('todos');
+          }
         }
-    },
-    mounted(){
-        if(localStorage.getItem('taskList')){
-            try{
-                this.taskList = JSON(localStorage.getItem('taskList'));
-            }catch(e){
-                localStorage.removeItem('taskList');
-            }
-        }
-    },
-
-    methods: {
-        addTask: function () {
-            if(this.task != ""){
-                this.taskList.push(this.task);
-                this.task = "";
-                this.color = "#fff";
-                this.saveTasks();
-            } else{
-                this.color = "#e74c3c";
-                this.saveTasks();
-            }
+      },
+  
+      methods: {
+        addTodo() {
+          // ensure they actually typed something
+          if(!this.newTodo) return;
+          this.todos.push(this.newTodo);
+          this.newTodo = '';
+          this.saveTodos();
         },
-
-        removeTask:function(index){
-            this.taskList.splice(index, 1);
-            this.saveTasks();
+        removeTodo(x) {
+          this.todos.splice(x,1);
+          this.saveTodos();
         },
-
-        saveTasks() {
-            let parsed = JSON.stringify(this.taskList);
-            localStorage.setItem('taskList', parsed);
+        saveTodos() {
+          let parsed = JSON.stringify(this.todos);
+          localStorage.setItem('todos', parsed);
         }
-    }
+      }
 })

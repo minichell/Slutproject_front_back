@@ -132,21 +132,18 @@
 
     <h3>Goal</h3>
     <div class="container2">
-        <input type="text" placeholder="Your Goals today" v-model = "task" @keyup.enter> 
-        <button @click = "addTask" class="plus">Add</button>
+        <input type="text" placeholder="Your Goals today" v-model = "newTodo" @keyup.enter> 
+        <button @click = "addTodo" class="plus">Add</button>
     </div>
     <br><br><br>
 
     <ul class="goal-list">
-        <li v-for= "(t, index) in taskList" :key = "index">{{t}} <i @click = "removeTask(index)" class="fas fa-times"></i></li>
+        <li v-for= "(todo,n) in todos" :class = "todo">{{todo}} <i @click = "removeTodo(n)" class="fas fa-times"></i></li>
     </ul>
 
 </div>
 
 
-
-
-<div class="quotes">u got this</div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="/text/list.js"></script>
 <script src="/text/app.js"></script>
