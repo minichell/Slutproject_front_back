@@ -27,7 +27,6 @@
 
 </head>
 
-
 <body class="light">
     <script src="https://unpkg.com/aos@next/dist/aos.js" ></script> <!----->
     <script>
@@ -110,23 +109,40 @@
 </div>
 
 
-<main id="app" class="app">
-    <h3 class="plan">{{title}}</h3>
-    <form @submit.prevent= "addTodo">
-        <label for="newTodo" class="newtodo">New List</label>
-        <input v-model="newTodo"  name="newTodo" id="newTodo" value="" class="todo" placeholder="What's your plan today">
-        <button type="submit" name="button" class="button3">Add</button>
-    </form>
-    <button @click="allDone" type="button" name="button" class="button4">Mark All Done</button>
-    <ul class="check">
-        <li v-for="todo in todos">
-            <input type="checkbox" v-model="todo.done">
-          <span :class="{ done: todo.done }">{{todo.title}}</span> 
-          <button @click="removeTodo(todo)" type="button" name="button" class="button5">Remove</button>
-         </li>
+<div id="app">
+
+<h2 class="plan">Plan</h2>
+<form @submit.prevent = "addTodo">
+ <label for="newTodo" class="newtodo">New List</label>
+ <input v-model="newTodo" class="todo"placeholder="Whats your plan today"> 
+ <button @click="addTodo" class="button3">Add</button>
+</form>
+
+
+<ul class="check">
+    <li v-for="(todo,n) in todos">
+    <input type="checkbox" class="box">
+    <span :class="todo">{{todo}}</span>
+    <button @click="removeTodo(n)" class="button5">Remove</button>
+    </li>
+</ul>
+</div>
+
+<div id="goal">
+
+    <h3>Goal</h3>
+    <div class="container2">
+        <input type="text" placeholder="Your Goals today" v-model = "task" @keyup.enter> 
+        <button @click = "addTask" class="plus">Add</button>
+    </div>
+    <br><br><br>
+
+    <ul class="goal-list">
+        <li v-for= "(t, index) in taskList" :key = "index">{{t}} <i @click = "removeTask(index)" class="fas fa-times"></i></li>
     </ul>
-</main>
-   
+
+</div>
+
 
 
 
@@ -135,6 +151,7 @@
 <script src="/text/list.js"></script>
 <script src="/text/app.js"></script>
 <script src="/text/text.js"></script>
+<script src="/text/script.js"></script>
 
 
 </body>

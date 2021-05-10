@@ -1,26 +1,35 @@
-const app = new Vue ({
-    el: '#app',
+const app = new Vue({
+    el:'#app',
     data: {
-        title: 'Plan',
-        newTodo: '',
-        todos: []
+      todos:[],
+      newTodo:null,
+      limit: 5
     },
-    methods: {
-        addTodo() {
-            this.todos.push({
-                title: this.newTodo,
-                done: false
-            });
-            this.newTodo = '';
-        },
-        removeTodo(todo) {
-            const todoIndex = this.todos.indexOf(todo);
-            this.todos.splice(todoIndex, 1);
-        },
-        allDone(){
-            this.todos.forEach(todo => {
-                todo.done = true;
-            })
+    mounted() {
+      if(localStorage.getItem('todos')) {
+        try {
+          this.todos = JSON.parse(localStorage.getItem('todos'));
+        } catch(e) {
+          localStorage.removeItem('todos');
         }
+      }
+    },
+
+    methods: {
+      addTodo() {
+        // ensure they actually typed something
+        if(!this.newTodo) return;
+        this.todos.push(this.newTodo);
+        this.newTodo = '';
+        this.saveTodos();
+      },
+      removeTodo(x) {
+        this.todos.splice(x,1);
+        this.saveTodos();
+      },
+      saveTodos() {
+        let parsed = JSON.stringify(this.todos);
+        localStorage.setItem('todos', parsed);
+      }
     }
-});
+  })
