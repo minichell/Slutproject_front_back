@@ -3,7 +3,6 @@ const app = new Vue({
     data: {
       todos:[],
       newTodo:null,
-      limit: 5
     },
     mounted() {
       if(localStorage.getItem('todos')) {

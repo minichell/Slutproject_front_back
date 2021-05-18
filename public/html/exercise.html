@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/css/exersice.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css%22%3E" >
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js%22%3E"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
+    <script>
+        $(document).ready(function(){
+         $('#icon').click(function(){
+             $('ul').toggleClass('show');
+         });
+        });
+    </script>
+    <title>CalmPlan</title>
+
+</head>
+
+<body class="light">
+    <script src="https://unpkg.com/aos@next/dist/aos.js" ></script> <!----->
+    <script>
+      AOS.init({
+          offset: 200,
+          duration: 1000
+      });
+    </script>
+
+<header>
+    <p class="title" data-aos= "fade-up" >CALMPLAN</p>
+    <div class="container" data-aos= "fade-up">
+        <nav>
+            <ul>
+                <li><a href= "/">HOME</a></li>
+                <li><a href="plan.html">PLAN</a></li>
+                <li><a href="exercise.html">EXERSICE</a></li>
+                <li><a href="school.html">SCHOOL</a></li>
+                <li><a href="#">PROFILE / INFO</a></li>
+            </ul>
+            
+  <label id="icon">
+      <i class="fas fa-bars"></i>
+  </label>
+       </nav>
+  </div>
+</header>
+
+<div class="wlc" data-speed="0.3">
+<span class="text1">EXERSICE</span>
+<span class="text2"> You don't get what you wish for.</span>
+<span class="text2"> You get what you work for.</span>
+</div>
+
+<form class="button" action="/logout?_method=DELETE" method="POST">
+    <button data-aos= "fade-up"  type="submit"> Log Out</button>
+</form>
+
+<div id = "exer"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div class="circle">
+  <div id="cir1">
+    <ul id="lista">
+      <li> - Positive </li>
+      <li> - Concentration ability increased </li>
+      <li> - Stronger </li>
+      <li> - happier </li>
+    </ul>
+  </div>
+  <div id="cir2">
+    <ul id="lista2">
+      <li> - Healthier </li>
+      <li> - Less tired </li>
+      <li> - Smarter </li>
+      <li> - More focus </li>
+    </ul>
+  </div>
+  
+  <div id="cir3" data-aos= "fade-up">
+    <p id="information">
+      Lifting weights. Resistance training. Pumping iron. No matter what you call it, strength training is important for boosting the overall health and well-being of people of all ages and fitness levels. While strength training can seem a bit intimidating at first, the health benefits far outweigh any qualms you might have about picking up those weights for the first time.  </p>
+  </div>
+
+</div>
+
+<div class="calendar">
+  <div class="calendar-header">
+      <span class="month-picker" id="month-picker">February</span>
+      <div class="year-picker">
+          <span class="year-change" id="prev-year">
+              <pre><</pre>
+          </span>
+          <span id="year">2021</span>
+          <span class="year-change" id="next-year">
+              <pre>></pre>
+          </span>
+      </div>
+  </div>
+  <div class="calendar-body">
+      <div class="calendar-week-day">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+      </div>
+      <div class="calendar-days"></div>
+  </div>
+  <div class="calendar-footer">
+      <div class="toggle">
+          <span>Dark Mode</span>
+          <div class="dark-mode-switch">
+              <div class="dark-mode-switch-ident"></div>
+          </div>
+      </div>
+  </div>
+  <div class="month-list"></div>
+</div>
+
+<div id="date">
+  <div id="part1"> Date <input v-model="name" id ="name"></div>
+  <div id="part2"> Date <input v-model="name2" id ="name"></div> 
+  <div id="part3"> Date <input v-model="name3" id="name"></div>
+  <div id="part4"> Date <input v-model="name4" id ="name"></div>
+  <div id="part5"> Your Goal <input v-model="name5" id ="n_2"></div>
+ 
+ </div>
+
+    
+<div id="day1">
+  <h2 id ="plan">Plan</h2>
+  <form @submit.prevent = "addDay">
+   <label for="newDay" id ="newtodo">New List</label>
+   <input v-model="newDay" id ="todo" placeholder="Whats your plan today"> 
+   <button @click="addDay" id ="button3">Add</button>
+  </form>
+  
+  <ul class="check">
+      <li v-for="(day,n) in days">
+      <input type="checkbox" id ="box">
+      <span :class="day">{{day}}</span>
+      <button @click="removeDays(n)" class="button5">Remove</button>
+      </li>
+  </ul>
+  </div>
+
+
+  <div id="day2">
+    <h2 id ="plan_2">Plan</h2>
+    <form @submit.prevent = "addDay_2">
+     <label for="newDay_2" id ="newtodo_2">New List</label>
+     <input v-model="newDay_2" id ="todo_2" placeholder="Whats your plan today"> 
+     <button @click="addDay_2" id ="button3_2">Add</button>
+    </form>
+    
+    <ul class="check_2">
+        <li v-for="(day_2,n) in days_2">
+        <input type="checkbox" class="box2">
+        <span :class="day_2">{{day_2}}</span>
+        <button @click="removeDays_2(n)" class ="button5_2">Remove</button>
+        </li>
+    </ul>
+    </div>
+
+
+    <div id="day3">
+      <h2 id ="plan_3">Plan</h2>
+      <form @submit.prevent = "addDay_3">
+       <label for="newDay_3" id ="newtodo_3">New List</label>
+       <input v-model="newDay_3" id ="todo_3" placeholder="Whats your plan today"> 
+       <button @click="addDay_3" id ="button3_3">Add</button>
+      </form>
+      
+      <ul class="check_3">
+          <li v-for="(day_3,n) in days_3">
+          <input type="checkbox" class="box3">
+          <span :class="day_3">{{day_3}}</span>
+          <button @click="removeDays_3(n)" class ="button5_3">Remove</button>
+          </li>
+      </ul>
+      </div>
+
+      <div id="day4">
+        <h2 id ="plan_4">Plan</h2>
+        <form @submit.prevent = "addDay_4">
+         <label for="newDay_4" id ="newtodo_4">New List</label>
+         <input v-model="newDay_4" id ="todo_4" placeholder="Whats your plan today"> 
+         <button @click="addDay_4" id ="button3_4">Add</button>
+        </form>
+        
+        <ul class="check_4">
+            <li v-for="(day_4,n) in days_4">
+            <input type="checkbox" class="box4">
+            <span :class="day_4">{{day_4}}</span>
+            <button @click="removeDays_4(n)" class ="button5_4">Remove</button>
+            </li>
+        </ul>
+        </div>
+    
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="/text/app.js"></script>
+  <script src="/text/part4.js"></script>
+  <script src="/text/part3.js"></script>
+  <script src="/text/part1.js"></script>
+  <script src="/text/part2.js"></script>
+  <script src="/text/forum.js"></script>
+
+  
+
+
+</body>
+
+</html>

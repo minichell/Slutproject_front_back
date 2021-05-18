@@ -2,34 +2,34 @@ new Vue ({
 
     el: "#goal",
     data: {
-        todos:[],
-        newTodo:null,
+        goals:[],
+        newGoal:null,
       },
       mounted() {
-        if(localStorage.getItem('todos')) {
+        if(localStorage.getItem('goals')) {
           try {
-            this.todos = JSON.parse(localStorage.getItem('todos'));
+            this.goals = JSON.parse(localStorage.getItem('goals'));
           } catch(e) {
-            localStorage.removeItem('todos');
+            localStorage.removeItem('goals');
           }
         }
       },
   
       methods: {
-        addTodo() {
+        addGoal() {
           // ensure they actually typed something
-          if(!this.newTodo) return;
-          this.todos.push(this.newTodo);
-          this.newTodo = '';
-          this.saveTodos();
+          if(!this.newGoal) return;
+          this.goals.push(this.newGoal);
+          this.newGoal = '';
+          this.saveGoals();
         },
-        removeTodo(x) {
-          this.todos.splice(x,1);
-          this.saveTodos();
+        removeGoal(x) {
+          this.goals.splice(x,1);
+          this.saveGoals();
         },
-        saveTodos() {
-          let parsed = JSON.stringify(this.todos);
-          localStorage.setItem('todos', parsed);
+        saveGoals() {
+          let parsed = JSON.stringify(this.goals);
+          localStorage.setItem('goals',parsed);
         }
       }
 })

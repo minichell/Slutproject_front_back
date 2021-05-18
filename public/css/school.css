@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +6,6 @@
 
 html{
     scroll-behavior: smooth;
-    height: 100%;
 }
 
 body{
@@ -17,17 +15,9 @@ body{
     width: 100%;
     height:100vh;
     color: black;
-    background: linear-gradient(-45deg, rgba(79, 154, 149), rgba(127, 194, 189), rgba(221, 245, 244), rgba(252, 255, 255));  
+    background: linear-gradient(-45deg, rgba(126, 227, 126), rgba(221, 245, 244));
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-#msg{
-    position: absolute;
-    left: 16%;
-    top: 20%;
-    font-size: 45px;
-    font-family: 'Kalam', cursive;
 }
 
 .container{
@@ -120,8 +110,8 @@ nav #icon{
 
 .wlc{
     position: absolute;
-    top: 20%;
-    right: 20%;
+    top: 25%;
+    right: 15%;
 }
 
 .text1{
@@ -140,7 +130,7 @@ nav #icon{
     font-size: 25px;
     color: black;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kalam', cursive;
 }
 
 @keyframes text{
@@ -164,7 +154,7 @@ nav #icon{
 }
 
 button {
-    background-color: #DDF5F4;
+    background-color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     color: black;
@@ -179,25 +169,23 @@ button {
   }
   
   button:hover{
-    color: #4F9A95;
+    color: rgba(126, 227, 126);
   }
 
-/*//header/*/ 
-
-:root {
+  :root {
     --dark-body: #4d4c5a;
-    --dark-main: #70A6A2;
+    --dark-main:rgb(143, 196, 156);
     --dark-second: white;
-    --dark-hover: #323048;
+    --dark-hover: rgba(182,238,196);
     --dark-text: #f8fbff;
 
     --light-body: #f3f8fe;
     --light-main: #fdfdfd;
     --light-second: #c3c2c8;
-    --light-hover:  #DDF5F4;
+    --light-hover:  rgba(182,238,196);
     --light-text: #151426;
 
-    --blue: #B1E1DD;
+    --blue: rgba(182,238,196);
     --white: #fff;
 
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -236,8 +224,8 @@ button {
     border-radius: 30px;
     padding: 20px;
     position: relative;
-    top: 20%;
-    left: 15%;
+    top: 15%;
+    left: 40%;
     overflow: hidden;
     font-family:  'Kalam', cursive;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -492,242 +480,92 @@ button {
     }
 }
 
-
-  .storage:focus{
-    outline: none;
-  }
-
-  .storage{
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid white;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: 'Kalam', cursive;
+#question{
+    position: absolute;
+    bottom: 60%;
+    left: 10%;
     text-align: center;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-
-  .text{
     font-family: 'Kalam', cursive;
-    font-weight: 600;
-  }
-
-  .con{
-      position: absolute;
-      left: 45%;
-      top: 30%;
-  }
-
-  .date{
-    position: absolute;
-    right: 120%;
-    top: 10%;
-    font-family: 'Kalam', cursive;
-    font-weight: 600;
-    font-size: 40px;
-  }
-
-  .button2{
-      left: 100%;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-
-
-.todo{
-    position: absolute;
-    left: 44%;
-    top: 45%;
-    padding: 12px 40px;
-    margin-bottom: 16px;
-    display: inline-block;
-    border: 1px solid white;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: 'Kalam', cursive;
-    text-align: center;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.todo:focus{
-    outline: none;
-}
-
-.button3{
-    top: 44.5%;
-    left: 58%;
-}
-
-.button3:focus{
-    outline: none;
-}
-
-.button4{
-    top: 44.5%;
-    left: 64%;
-}
-
-.button5{
-    display: block;
-    position: relative;
-    bottom:4.5rem;
-    left:100%;
-}
-
-.plan{
-    position: absolute;
-    left: 39%;
-    top: 45%;
-    font-family: 'Kalam', cursive;
-    font-weight: 600;
-    font-size: 40px;
-}
-
-.newtodo{
-    position: absolute;
-    left: 39%;
-    top: 50%;
-    font-family: 'Kalam', cursive;
-    font-weight: 600;
-}
-
-.check{
-    position: absolute;
-    list-style: none;
-    left: 53rem;
-    top: 53%;
-    font-family: 'Kalam', cursive;
-
-}
-
-input[type="checkbox"] {
-appearance: none;
--webkit-appearance:none;
-height: 40px; 
-width: 40px;
-background-color: white;
-border-radius: 50%;
-cursor: pointer;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-input[type="checkbox"]:after{
-    font-family: "Font Awesome 5 Free";
-    content: "\f00c";
-    font-weight: 900;
+#q1{
+    left: 3rem;
     font-size: 25px;
-    color: white;
-    display: none;
+    font-weight: 600;
+    font-family: 'Kalam', cursive;
 }
 
-input[type="checkbox"]:hover{
-     background-color: white;
-}
-
-input[type="checkbox"]:checked{
-    background-color:#70A6A2;
-}
-
-input[type="checkbox"]:checked:after{
+#name_1{
+    position: relative;
+    width:400px;
+    height: 100px;
     display: block;
+    top: 5%;
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+    border: white;
+    border-radius: 50px;
+    text-align: center;
 }
 
-#goal{
-    position: absolute;
-    height: 200px;
-    width: 400px;
-    left: 76%;
-    top: 60%;
-    transform: translate(-50%, -20%);
-    padding: 6px 14px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-
-h3{
-    font-size: 28px;
-    color: black;
-    font-family:'Kalam', cursive;
-    letter-spacing: 1px;
-}
-
-.container2{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: left;
-    align-items: center;
-}
-
-.container2 input[type = "text"]{
-    height:  46px;
-    width: 70%;
-    border: none;
-    padding-left: 10px;
-    transition: all .3s ease-in-out;
-    font-family:'Kalam', cursive;
-}
-
-.container2 button{
-    position: relative;
-    left: 3%;
-    height: 50px;
-    width: 100px;
-    border: none;
-    box-shadow: 2%;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-
-.container2 input[type = "text"]:focus{
+#name_1:focus{
     outline: none;
 }
 
-.goal-list{
+
+#q2{
     position: absolute;
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    right: 0%;
+    top: 13rem;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Kalam', cursive;
 }
 
-.goal-list li{
-    background-color: #DDF5F4;
-    font-family:'Kalam', cursive;
-    text-align: center;
-    height: 40px;
-    color: black;
-    font-size: 22px;
-    line-height: 38px;
-    margin-top: 1px;
-    list-style: none;
+#name_2{
     position: relative;
-    border-radius: 10px;
-}
-
-.goal-list li i{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 40px;
+    width:400px;
+    height: 100px;
+    display: block;
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+    border: white;
+    border-radius: 50px;
     text-align: center;
-    line-height: 38px;
-    background-color:#DDF5F4;
-    transition: all .2s linear;
-    cursor: pointer;
-    border-radius: 10px;
 }
 
-.goal-list li i:hover{
-  color: #70A6A2;
+#name_3:focus{
+    outline: none;
 }
+
+#q3{
+    position: absolute;
+    top: 25rem;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Kalam', cursive;
+}
+
+#name_3{
+    position: relative;
+    width:400px;
+    height: 100px;
+    display: block;
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+    border: white;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#name_3:focus{
+    outline: none;
+}
+
+
+
+
+
+
+
+
 

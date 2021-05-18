@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="/css/plan.css" type="text/css">
+    <link rel="stylesheet" href="/css/school.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css%22%3E" >
 
     <script src="https://code.jquery.com/jquery-3.5.1.js%22%3E"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script>
         $(document).ready(function(){
          $('#icon').click(function(){
@@ -27,7 +26,8 @@
 
 </head>
 
-<body class="light">
+
+<body class ="light">
     <script src="https://unpkg.com/aos@next/dist/aos.js" ></script> <!----->
     <script>
       AOS.init({
@@ -41,10 +41,10 @@
     <div class="container" data-aos= "fade-up">
         <nav>
             <ul>
-                <li><a href= "/">HOME</a></li>
+                <li><a href="/">HOME</a></li>
                 <li><a href="plan.html">PLAN</a></li>
                 <li><a href="exercise.html">EXERSICE</a></li>
-                <li><a href="#">SCHOOL</a></li>
+                <li><a href="school.html">SCHOOL</a></li>
                 <li><a href="#">ABOUT US</a></li>
             </ul>
             
@@ -55,18 +55,20 @@
   </div>
 </header>
 
-<p id="msg" data-aos= "fade-up">Plan your day today</p>
-
 <div class="wlc" data-speed="0.3">
-<span class="text1">Plan</span>
-<span class="text2"> D R E A M.</span>
-<span class="text2"> P L A N.</span>
-<span class="text2"> D O.</span>
+<span class="text1">SCHOOL</span>
+<span class="text2"> Do something</span>
+<span class="text2"> Today</span>
+<span class="text2"> That your </span>
+<span class="text2"> Future self </span>
+<span class="text2"> Will </span>
+<span class="text2"> Thank you for.</span>
 </div>
 
 <form class="button" action="/logout?_method=DELETE" method="POST">
     <button data-aos= "fade-up"  type="submit"> Log Out</button>
 </form>
+
 <div class="calendar">
     <div class="calendar-header">
         <span class="month-picker" id="month-picker">February</span>
@@ -101,58 +103,21 @@
         </div>
     </div>
     <div class="month-list"></div>
-</div>
-
-<div class="con">
-    <p class="date">Date</p>
-    <input class = "storage" type="text">
-    <p class="text">text</p>
-    <button class ="button2">Save</button>
-</div>
+  </div>
 
 
-<div id="app">
+  
+<div id="question">
 
-<h2 class="plan">Plan</h2>
-<form @submit.prevent = "addTodo">
- <label for="newTodo" class="newtodo">New List</label>
- <input v-model="newTodo" class="todo"placeholder="Whats your plan today"> 
- <button @click="addTodo" class="button3">Add</button>
-</form>
-
-
-<ul class="check">
-    <li v-for="(todo,n) in todos">
-    <input type="checkbox" class="box">
-    <span :class="todo">{{todo}}</span>
-    <button @click="removeTodo(n)" class="button5">Remove</button>
-    </li>
-</ul>
-</div>
-
-<div id="goal">
-
-    <h3>Goal</h3>
-    <div class="container2">
-        <input type="text" placeholder="Your Goals today" v-model = "newGoal" @keyup.enter> 
-        <button @click = "addGoal" class="plus">Add</button>
-    </div>
-    <br><br><br>
-
-    <ul class="goal-list">
-        <li v-for= "(goal,n) in goals" :class = "goal">{{goal}} <i @click = "removeGoal(n)" class="fas fa-times"></i></li>
-    </ul>
-
-</div>
-
+    <div id="q1">What works well for you in school?<input v-model="name_1" id="name_1"></div>
+    <div id="q2">What works bad for you in school?<input v-model="name_2" id="name_2"></div>
+    <div id="q3">How should you work to get better?<input v-model="name_3" id="name_3"></div>
+   
+   </div>
+  
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<script src="/text/list.js"></script>
+<script src="/text/question.js"></script>
 <script src="/text/app.js"></script>
-<script src="/text/text.js"></script>
-<script src="/text/script.js"></script>
-
-
 </body>
-
 </html>
