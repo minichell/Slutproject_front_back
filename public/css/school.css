@@ -562,6 +562,109 @@ button {
 }
 
 
+#work{
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    left: 51%;
+    top: 85%;
+    transform: translate(-50%, -20%);
+    padding: 6px 14px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+h3{
+    font-size: 28px;
+    color: black;
+    font-family:'Kalam', cursive;
+    letter-spacing: 1px;
+}
+
+.container2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.container2 input[type = "text"]{
+    height:  46px;
+    width: 70%;
+    border: none;
+    padding-left: 10px;
+    transition: all .3s ease-in-out;
+    font-family:'Kalam', cursive;
+}
+
+.container2 button{
+    position: relative;
+    left: 3%;
+    height: 50px;
+    width: 100px;
+    border: none;
+    box-shadow: 2%;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.container2 input[type = "text"]:focus{
+    outline: none;
+}
+
+.goal-list{
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    right: 0%;
+}
+
+.goal-list li{
+    background-color: rgb(143, 196, 156);
+    font-family:'Kalam', cursive;
+    text-align: center;
+    height: 40px;
+    color: black;
+    font-size: 22px;
+    line-height: 38px;
+    margin-top: 1px;
+    list-style: none;
+    position: relative;
+    border-radius: 10px;
+}
+
+.goal-list li i{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    background-color:rgb(143, 196, 156);
+    transition: all .2s linear;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.goal-list li i:hover{
+  color: rgba(182,238,196);
+}
+
+.plus{
+    background-color: rgb(143, 196, 156);
+}
+
+.plus:hover{
+    color: white;
+}
+
 
 
 

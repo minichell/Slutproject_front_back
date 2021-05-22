@@ -231,9 +231,9 @@ button {
   }
 
   #information{
-      position: absolute;
-      top: 30%;
-      right:4%;
+     position: absolute;
+     top: 30%;
+     right:4%;
      width: 400px;
      height: 200px;
      font-size: 15px;
@@ -359,8 +359,8 @@ button {
 
   #plan{
     position: absolute;
-    bottom: 11rem;
-    left: 2rem;
+    bottom: 15rem;
+    left: 18rem;
     font-family: 'Kalam', cursive;
     font-weight: 600;
     font-size: 20px;
@@ -368,8 +368,8 @@ button {
 
 #newtodo{
     position: absolute;
-    bottom: 10rem;
-    left: 1.5rem;
+    bottom: 14rem;
+    left: 18rem;
     width: 100px;
     font-size: 12px;
     font-family: 'Kalam', cursive;
@@ -388,8 +388,8 @@ button {
 
 #plan_2{
     position: absolute;
-    bottom: 11rem;
-    left: 23.5rem;
+    bottom: 15rem;
+    left: 39rem;
     font-family: 'Kalam', cursive;
     font-weight: 600;
     font-size: 20px;
@@ -397,8 +397,8 @@ button {
 
 #newtodo_2{
     position: absolute;
-    bottom: 10rem;
-    left: 23.3rem;
+    bottom: 14rem;
+    left: 39rem;
     width: 100px;
     font-size: 12px;
     font-family: 'Kalam', cursive;
@@ -447,8 +447,8 @@ button {
 
 #plan_3{
     position: absolute;
-    bottom: 11rem;
-    left: 38%;
+    bottom: 15rem;
+    left: 51%;
     font-family: 'Kalam', cursive;
     font-weight: 600;
     font-size: 20px;
@@ -456,8 +456,8 @@ button {
 
 #newtodo_3{
     position: absolute;
-    bottom: 10rem;
-    left: 38%;
+    bottom: 14rem;
+    left: 51%;
     width: 100px;
     font-size: 12px;
     font-family: 'Kalam', cursive;
@@ -507,8 +507,8 @@ button {
 
 #plan_4{
     position: absolute;
-    bottom: 11rem;
-    left: 58%;
+    bottom: 15rem;
+    left: 71%;
     font-family: 'Kalam', cursive;
     font-weight: 600;
     font-size: 20px;
@@ -516,8 +516,8 @@ button {
 
 #newtodo_4{
     position: absolute;
-    bottom: 10rem;
-    left: 58%;
+    bottom: 14rem;
+    left: 71%;
     width: 100px;
     font-size: 12px;
     font-family: 'Kalam', cursive;
