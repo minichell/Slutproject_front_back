@@ -41,6 +41,5 @@ const app = new Vue({
       name5(newName5) {
         localStorage.name5 = newName5;
       },
-     
     }
   });

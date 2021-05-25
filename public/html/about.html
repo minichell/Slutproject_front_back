@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/css/about.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css%22%3E" >
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js%22%3E"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script>
+        $(document).ready(function(){
+         $('#icon').click(function(){
+             $('ul').toggleClass('show');
+         });
+        });
+    </script>
+    <title>CalmPlan</title>
+
+</head>
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" ></script> <!----->
+    <script>
+      AOS.init({
+          offset: 200,
+          duration: 1000
+      });
+    </script>
+
+<header>
+    <p class="title" data-aos= "fade-up" >CALMPLAN</p>
+    <div class="container" data-aos= "fade-up">
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/html/plan.html">PLAN</a></li>
+                <li><a href="exercise.html">EXERSICE</a></li>
+                <li><a href="school.html">SCHOOL</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+            </ul>
+            
+  <label id="icon">
+      <i class="fas fa-bars"></i>
+  </label>
+       </nav>
+  </div>
+</header>
+
+<div class="wlc" data-speed="0.3">
+<span class="text1">Information</span>
+</div>
+
+<form class="button" action="/logout?_method=DELETE" method="POST">
+    <button data-aos= "fade-up"  type="submit"> Log Out</button>
+</form>
+
+
+<div id="profile"  data-aos= "fade-up">
+  <p class ="profile_account">Profile</p>
+  <div id="date"> Date <input v-model="name6"></div>
+  <div  id="email"> Email <input v-model="name7"></div>
+  <div  id="gender"> Gender <input v-model="name8" ></div>
+  <div  id="age"> Age <input v-model="name9"></div>
+  <div  id="number"> Phonenumber <input v-model="name10" type="phonenumber"></div>
+  <div  id="personal"> personal characteristics <input v-model="name11" type="phonenumber"></div>
+  <div  id="q1"> Things that make you foucs: <input v-model="name12"></div>
+  <div  id="q2"> Things that make you motivate: <input v-model="name13" t></div>
+  <div  id="q3"> Inferior properties <input v-model="name14" ></div>
+  <div  id="q4"> Best properties <input v-model="name15" ></div>
+  <div  id="q5"> Things you want to bet better at <input v-model="name16"></div>
+</div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="/text/profile.js"></script>
+
+ 
+ 
+   
+
+     
+
+</body>
+</html>
