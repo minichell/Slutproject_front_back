@@ -256,3 +256,87 @@ button {
     top: 1%;
   }
 
+
+  .co{
+    display: flow-root;
+    width: 100%;
+    justify-content: space-around;
+    font-family: 'Kalam', cursive;
+
+}
+
+.co .ca{
+    position: relative;
+    bottom: 35rem;
+    left: 47%;
+    max-width: 800px;
+    height: 200px;
+    background:rgba(127, 194, 189);
+    border-radius: 90px;
+    margin:40px 20px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out ;
+    border-radius:4px;
+    box-shadow: 0px 7px 20px rgba(0,0,0,0.5);
+}
+
+
+.co .ca:hover {
+    height: 500px;
+}
+
+
+.co .ca .im{
+    position: relative;
+    width: 100%;
+    height: 520px;
+    top: -60;
+    left: 20px;
+    z-index: 1;
+  font-size: 10px;
+
+}
+
+.co .ca .im img{
+    width: 100%;
+    border-radius:4px;
+    box-shadow: 0px 7px 20px rgba(0,0,0,0.5);
+}
+
+.co .ca .con{
+    position: relative;
+    margin-top:-180px;
+    font-size: 20px;
+    padding: 200px 60px;
+    text-align: center;
+    color:black;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.co .ca:hover .con{
+    visibility: visible;
+    z-index: 50;
+    opacity: 1;
+    margin-top: -5px;
+    transition-delay: 0.3s;
+}
+
+.co{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+
+#tema{
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+
+.q{
+    opacity: 1;
+}
+

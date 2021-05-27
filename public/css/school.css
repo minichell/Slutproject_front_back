@@ -488,6 +488,7 @@ button {
     font-family: 'Kalam', cursive;
 }
 
+
 #q1{
     left: 3rem;
     font-size: 25px;
@@ -519,6 +520,10 @@ button {
     font-size: 25px;
     font-weight: 600;
     font-family: 'Kalam', cursive;
+}
+
+#name_2:focus{
+    outline: none;
 }
 
 #name_2{
