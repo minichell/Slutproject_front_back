@@ -65,7 +65,7 @@ app.post('/register',checkNotAuthenticated, async (req, res) => {
             id: Date.now().toString(),
             name: req.body.name,
             email: req.body.email,
-            password: hashedPassword
+            password: hashedPassword //HashedPassword make it sure that our application is entirely secure.
         })
        
     } catch{
